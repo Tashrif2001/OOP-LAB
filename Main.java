@@ -10,10 +10,10 @@ public class Main {
 		Grocery item[]=new Grocery[4];
 		for(int i=0; i<4; i++) {
 		item[i] = new Grocery();
-	    item[i].itemNames= itemNames[i];
-	    item[i].itemPrices = itemPrices[i];
-	    item[i].onSale = itemOnSale[i];
-	    item[i].itemQuantities = itemQuantities[i];
+	        item[i].itemNames= itemNames[i];
+	        item[i].itemPrices = itemPrices[i];
+	        item[i].onSale = itemOnSale[i];
+	        item[i].itemQuantities = itemQuantities[i];
 		}
 		System.out.println("Grocery List:");
 
