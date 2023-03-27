@@ -16,7 +16,7 @@ public class Student {
     	System.out.println("Student ID: " + id);
     	System.out.println("List of borrowed books: ");
     	for(int j=0; j<i; j++)
-    		System.out.println(borrowedBooks[j]);
+    		System.out.println(borrowedBooks[j].getTitle());
     }
     public void borrowBook(Book book) {
     	if(i<20) {
@@ -32,8 +32,12 @@ public class Student {
     		if(borrowedBooks[j]==book) {
     			book.returnBook();
     			borrowedBooks[j]=null;
+    			for(int k=j; k<i; k++) {
+    				borrowedBooks[k]= borrowedBooks[k+1];
+    			}
     			i--;
     			flag = 1;
+    			System.out.println("The book " + book.getTitle() + " was returned.");
     			break;
     		}
     	}
