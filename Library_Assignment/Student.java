@@ -16,7 +16,7 @@ public class Student {
     	System.out.println("Student ID: " + id);
     	System.out.println("List of borrowed books: ");
     	for(int j=0; j<i; j++)
-    		System.out.println(borrowedBooks[j].getTitle());
+    		System.out.println(borrowedBooks[j]);
     }
     public void borrowBook(Book book) {
     	if(i<20) {
