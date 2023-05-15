@@ -3,9 +3,8 @@ import java.util.*;
 
 public class University {
 	private ArrayList<Person> list;
-	public University(Person person) {
-		this.list = new ArrayList<>();
-		list.add(person);
+	public University(ArrayList<Person> persons) {
+		this.list = persons;
 	}
 	 public String getFullNames() {
 		 ArrayList<String>names = new ArrayList<>();
