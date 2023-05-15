@@ -39,4 +39,12 @@ public class University {
 	        }
 	        return youngestPerson;
 	    }
+	 public ArrayList<Person> getVoters(){
+		 ArrayList<Person> canVote = new ArrayList<Person>();
+		 for(Person x : list) {
+			 if(x.canVote())
+				 canVote.add(x);
+		 }
+		return canVote;
+	 }
 }
