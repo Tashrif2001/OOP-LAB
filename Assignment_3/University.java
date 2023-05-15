@@ -22,15 +22,12 @@ public class University {
 	}
 	 
 	 public Person getOldestPerson() {
-		 int max=0;
-		 for(Person per : list) {
-			 if(per.age>max)
-				 max = per.age;
-		 }
-		 for(int i=0; i<list.size(); i++) {
-			 if(max==list.get(i).age)
-				 return list.get(i);
-		 }
-		return null;
-	 }
+	        Person oldestPerson = null;
+	        for (Person person : list) {
+	            if (oldestPerson == null || person.getAge() > oldestPerson.getAge()) {
+	                oldestPerson = person;
+	            }
+	        }
+	        return oldestPerson;
+	    }
 }
