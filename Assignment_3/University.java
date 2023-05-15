@@ -30,4 +30,13 @@ public class University {
 	        }
 	        return oldestPerson;
 	    }
+	 public Person getYoungestPerson() {
+	        Person youngestPerson = new Person(list.get(0).getFirstName(), list.get(0).getLastName(), list.get(0).age);
+	        for (Person person : list) {
+	            if (youngestPerson == null || person.getAge() < youngestPerson.getAge()) {
+	                youngestPerson = person;
+	            }
+	        }
+	        return youngestPerson;
+	    }
 }
