@@ -5,6 +5,7 @@ public class University {
 	private ArrayList<Person> list;
 	public University(Person person) {
 		this.list = new ArrayList<>();
+		list.add(person);
 	}
 	 public String getFullNames() {
 		 ArrayList<String>names = new ArrayList<>();
@@ -22,8 +23,15 @@ public class University {
 	}
 	 
 	 public Person getOldestPerson() {
+		 int max=0;
 		 for(Person per : list) {
-			 if()
+			 if(per.age>max)
+				 max = per.age;
 		 }
+		 for(int i=0; i<list.size(); i++) {
+			 if(max==list.get(i).age)
+				 return list.get(i);
+		 }
+		return null;
 	 }
 }
