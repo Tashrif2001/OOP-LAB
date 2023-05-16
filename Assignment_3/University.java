@@ -9,7 +9,7 @@ public class University {
 	 public String getFullNames() {
 		 ArrayList<String>names = new ArrayList<>();
 		 for(Person per : list) {
-			 names.add(per.getFullName());
+			 names.add(per.getFirstName() + " " + per.getLastName());
 		 }
 		 String out="";
 		 for(int i=0; i<names.size(); i++) {
@@ -39,20 +39,22 @@ public class University {
 	        }
 	        return youngestPerson;
 	    }
-	 public ArrayList<Person> getVoters(){
-		 ArrayList<Person> canVote = new ArrayList<Person>();
-		 for(Person x : list) {
-			 if(x.canVote())
-				 canVote.add(x);
-		 }
-		return canVote;
-	 }
-	public int getNumberOfEmployees(){
-     int count=0;
-     for(Person p : list){
-       if(p.getFullName().contains("Employees"))
-         count++;
-     }
-     return count;
-   }
+
+		public ArrayList<Person> getVoters() {
+			ArrayList<Person> canVote = new ArrayList<Person>();
+			for (Person x : list) {
+				if (x.canVote())
+					canVote.add(x);
+			}
+			return canVote;
+		}
+
+		public int getNumberOfEmployees() {
+			int count = 0;
+			for (Person p : list) {
+				if (p.getFullName().contains("Employee"))
+					count++;
+			}
+			return count;
+		}
 }
