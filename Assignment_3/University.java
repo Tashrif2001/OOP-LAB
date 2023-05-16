@@ -47,10 +47,10 @@ public class University {
 		 }
 		return canVote;
 	 }
-	public getNumberOfEmployees(){
+	public int getNumberOfEmployees(){
      int count=0;
      for(Person p : list){
-       if(p instanceof Employee)
+       if(p.getFullName().contains("Employees"))
          count++;
      }
      return count;
