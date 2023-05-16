@@ -47,4 +47,12 @@ public class University {
 		 }
 		return canVote;
 	 }
+	public getNumberOfEmployees(){
+     int count=0;
+     for(Person p : list){
+       if(p instanceof Employee)
+         count++;
+     }
+     return count;
+   }
 }
