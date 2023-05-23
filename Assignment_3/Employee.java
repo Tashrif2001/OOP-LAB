@@ -7,7 +7,7 @@ public class Employee extends Person{
 	}
 	@Override
 	public String getFullName() {
-		return String.format("%s %s", super.getFirstName(), super.getLastName());
+		return String.format("%s %s (Employee)", super.getFirstName(), super.getLastName());
 	}
 	
 }
